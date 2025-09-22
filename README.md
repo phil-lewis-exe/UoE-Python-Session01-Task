@@ -1,7 +1,9 @@
+<!--
 <style>
 details { padding-top: 1em; padding-bottom:1em;}
 details summary {text-transform: uppercase; font-size: 0.8em; text-transform: uppercase; font-weight: bold; }
-</style>
+</style
+-->
 
 # Session 01: Practice Activity 
 
