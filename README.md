@@ -1,8 +1,15 @@
-# GitHub Codespaces & Python: Your First Week
+<style>
+details { padding-top: 1em; padding-bottom:1em;}
+details summary {text-transform: uppercase; font-size: 0.8em; text-transform: uppercase; font-weight: bold; }
+</style>
 
-Welcome to your first week of Python! This guide will walk you through the essential first steps of setting up your workspace, creating a file, and writing your first lines of code using GitHub Codespaces.
+# Session 01: Practice Activity 
 
-### Part 1: Forking the Repository & Launching Your Codespace
+You should now have read through the Session 1 activities. These cover the first two chapters in Crash Course in Python, and also how to work in the CodeSpaces web IDE.
+
+This exercise is set up to let you try out those skills: how to open your workspace; create a Python file; write code to store information and do calculations; and save your work to your GitHub repository.
+
+## Forking the Repository & Launching Your Codespace
 
 Before you can start coding, you need to create your own copy of the course repository. This is called "forking". Forking allows you to experiment and save your work without affecting the original project.
 
@@ -20,7 +27,7 @@ Before you can start coding, you need to create your own copy of the course repo
    * Select the **Codespaces** tab.
    * Click **Create codespace on main** to launch your cloud-based VS Code editor. This might take a minute or two to build for the first time.
 
-### Part 2: Navigating Your Workspace in the Terminal
+## Navigating Your Workspace in the Terminal
 
 Your Codespace provides a ready-to-use development environment. The terminal is a powerful tool for navigating this environment and managing files.
 
@@ -65,7 +72,7 @@ Your Codespace provides a ready-to-use development environment. The terminal is 
    ```
    You should now see your new `cinema_ex.py` file listed in the terminal.
 
-### Part 3: Opening Your File in the Editor
+## Opening Your File in the Editor
 
 Now that you've created the file via the terminal, let's open it in the editor.
 
@@ -75,14 +82,20 @@ Now that you've created the file via the terminal, let's open it in the editor.
 
 3. **Open the File:** Click on `cinema_ex.py`. It will open in the main editor panel, ready for you to write code.
 
-### Part 4: Writing and Running Your First Code
+## Writing and Running Your First Code
 
 Let's write a line of code to make sure everything is working.
 
 1. **Write the Print Statement:** In the editor panel for `cinema_ex.py`, type a `print()` function that displays the welcome message: "Welcome to the University of Exeter cinema!".
-   ```python
-   print("Welcome to the University of Exeter cinema!")
-   ```
+
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
+      ```python
+      print("Welcome to the University of Exeter cinema!")
+      ```
+
+   </details>
 
 2. **Automatic Saving:** In Codespaces, the editor saves all changes to your files as you make them. You don't need to manually save.
 
@@ -101,21 +114,32 @@ Let's write a line of code to make sure everything is working.
    Welcome to the University of Exeter cinema!
    ```
 
-### Part 5: Using Variables and F-Strings
+## Using Variables and F-Strings
 
 Variables store information. F-strings let us easily format and display that information.
 
 1. **Add Variables and F-String:** In your `cinema_ex.py` file, first define two variables. Set `weekday` to `"Saturday"` and `title` to `"Ferris Bueller's Day Off"`. Then, use a `print` function with an f-string to display their contents in a sentence.
-   ```python
-   # Film and day information
-   weekday = "Saturday"
-   title = "Ferris Bueller's Day Off"
-   
-   # Use an f-string to display the variables
-   print(f"Today is {weekday}, and the film showing is {title}")
-   ```
+
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
+
+      ```python
+      # Film and day information
+      weekday = "Saturday"
+      title = "Ferris Bueller's Day Off"
+      
+      # Use an f-string to display the variables
+      print(f"Today is {weekday}, and the film showing is {title}")
+      ```
+
+   </details>
 
 2. **Run Again:** Your file is saved automatically. Run it again from the terminal using the same command as before.
+
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
    ```bash
    python cinema_ex.py
    ```
@@ -124,12 +148,19 @@ Variables store information. F-strings let us easily format and display that inf
    Welcome to the University of Exeter cinema!
    Today is Saturday, and the film showing is Ferris Bueller's Day Off
    ```
+   
+   </details>
 
-### Part 6: Calculating Attendance
+## Calculating Attendance
 
 Now let's track ticket sales and see how many seats are left.
 
 1. **Add Attendance Variables:** In your script, add the variables `capacity`, `n_adult`, `n_child`, and `n_student`. These should store the cinema's capacity, which is 200, and the current number of tickets sold: 12 adult tickets, 0 child tickets, and 97 student tickets.
+
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
+
    ```python
    # Attendance information
    capacity = 200
@@ -138,40 +169,65 @@ Now let's track ticket sales and see how many seats are left.
    n_student = 97
    ```
 
+   </details>
+
 2. **Calculate and Display Totals:** Next, add code to calculate the `total_tickets_sold` by adding the three ticket types together. Then, calculate the `seats_remaining`. Finally, print both of these results using f-strings.
-   ```python
-   total_tickets_sold = n_adult + n_child + n_student
-   seats_remaining = capacity - total_tickets_sold
-   
-   print(f"Total tickets sold: {total_tickets_sold}")
-   print(f"Seats remaining: {seats_remaining}")
-   ```
+
+      <details>
+      <summary>SHOW MODEL ANSWER</summary>
+
+      ```python
+      total_tickets_sold = n_adult + n_child + n_student
+      seats_remaining = capacity - total_tickets_sold
+      
+      print(f"Total tickets sold: {total_tickets_sold}")
+      print(f"Seats remaining: {seats_remaining}")
+      ```
+
+      </details>
 
 3. **Run and Check:** Run the file again from the terminal to see your new calculations.
+
    ```
    Total tickets sold: 109
    Seats remaining: 91
    ```
 
-### Part 7: Calculating Takings
+## Calculating Takings
 
 Finally, let's calculate the total cash taken from ticket sales.
 
 1. **Add Price Variables:** First, add the variables `price_adult`, `price_child`, and `price_student` to your script. These should store the price for each ticket type: 9.99 for an adult ticket, 4.99 for a child ticket, and 5.99 for a student ticket.
-   ```python
-   # Ticket price information
-   price_adult = 9.99
-   price_child = 4.99
-   price_student = 5.99
-   ```
+
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
+
+      ```python
+      # Ticket price information
+      price_adult = 9.99
+      price_child = 4.99
+      price_student = 5.99
+      ```
+
+   </details>
 
 2. **Calculate Total Cash:** Now, create a `cash_taken` variable. To calculate its value, multiply each ticket count variable by its corresponding price variable, and add the results together. Finally, print the result in a user-friendly message, formatting it to two decimal places.
+
+   *Note: You can use `:.2f` inside the f-string so it formats the number to two decimal places, which is useful for currency e.g. will show £10.80 and not £10.8*
+
+   <details>
+   <summary>SHOW MODEL ANSWER</summary>
+
    ```python
    cash_taken = (n_adult * price_adult) + (n_child * price_child) + (n_student * price_student)
    
    print(f"Cash taken: £{cash_taken:.2f}")
    ```
-   *Note: You can use `:.2f` inside the f-string so it formats the number to two decimal places, which is useful for currency e.g. will show £10.80 and not £10.8*
+
+   </details>
+
+
 
 3. **Run and Check:** Run the file one last time.
    Your final output should look like this:
@@ -185,9 +241,9 @@ Finally, let's calculate the total cash taken from ticket sales.
 
 You have successfully navigated your workspace, written a Python script that uses variables, and performed calculations. Great work!
 
-### Part 8: Committing Your Changes to GitHub via the Terminal
+## Committing Your Changes to GitHub via the Terminal
 
-The final step is to save your work back to your forked repository on GitHub. We will do this using `git` commands in the terminal. This process is called "committing" and "pushing".
+The final step is to save your work back to your forked repository on GitHub. We will do this using `git` commands in the terminal. This process is called "committing" and "pushing". As shown in the CodeSpaces video tutorial you can save files to GitHub using the toolbar, but it is often useful to be able to do this using terminal commands.
 
 1. **Check the Status:** First, let's see what changes Git has tracked. In your terminal, type the `git status` command.
    ```bash
@@ -214,14 +270,14 @@ The final step is to save your work back to your forked repository on GitHub. We
    ```
 You can now go to your forked repository on the GitHub website, navigate to the `WORKSPACE/Session01` folder, and you will see your `cinema_ex.py` file saved there with your commit message.
 
-### **Appendix: Windows Terminal Commands**
+## **Appendix: Windows Terminal Commands**
 
-If working in the terminal in VS Code on a Windows laptop, the system commands are different:
+CodeSpaces is based on the VS Code IDE application. If working in the terminal in VS Code on a Windows laptop, the system commands are different:
 
 | **Linux Command** | **Windows PowerShell Command** | **Description** | 
 | :--- | :--- | :--- |
-| **pwd** | **gl** | **Prints the current working directory.** | 
-| **ls** | **dir** | **Lists the contents of the directory.** | 
-| **touch file.py** | **New-Item file.py** | **Creates a new, empty file.** | 
-| **cat file.py** | **type file.py** | **Displays the contents of a file.** | 
-| **cd** | **cd** | **Change directory (this one is the same!).** | 
+| `pwd` | `gl` | **Prints the current working directory.** | 
+| `ls` | `dir` | **Lists the contents of the directory.** | 
+| `touch file.py` | `New-Item file.py` | **Creates a new, empty file.** | 
+| `cat file.py` | `type file.py` | **Displays the contents of a file.** | 
+| `cd` | `cd` | **Change directory (this one is the same!).** | 
